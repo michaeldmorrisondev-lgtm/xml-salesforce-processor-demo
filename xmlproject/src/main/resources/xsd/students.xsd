@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    elementFormDefault="qualified">
+
+    <xs:element name="Students">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Student" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="StudentId" type="xs:int"/>
+                            <xs:element name="FirstName" type="xs:string"/>
+                            <xs:element name="LastName" type="xs:string"/>
+                            <xs:element name="Email" type="EmailType"/>
+                            <xs:element name="DateOfBirth" type="xs:date"/>
+                            <xs:element name="Gender" type="GenderType"/>
+
+                            <xs:element name="Address">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Street" type="xs:string"/>
+                                        <xs:element name="City" type="xs:string"/>
+                                        <xs:element name="State" type="StateCodeType"/>
+                                        <xs:element name="PostalCode" type="PostalCodeType"/>
+                                        <xs:element name="Country" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="Courses">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Course" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="CourseCode" type="xs:string"/>
+                                                    <xs:element name="CourseName" type="xs:string"/>
+                                                    <xs:element name="EnrollmentDate" type="xs:date"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="GenderType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="M"/>
+            <xs:enumeration value="F"/>
+            <xs:enumeration value="Other"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StateCodeType">
+        <xs:restriction base="xs:string">
+            <xs:length value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PostalCodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{5}(-\d{4})?"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="EmailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@\s]+@[^@\s]+\.[^@\s]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

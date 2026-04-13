@@ -1,0 +1,56 @@
+<Students>
+    <Student>
+        <StudentId>1001</StudentId>
+        <FirstName>John</FirstName>
+        <LastName>Doe</LastName>
+        <Email>john.doe@example.com</Email>
+        <DateOfBirth>2001-05-15</DateOfBirth>
+        <Gender>M</Gender>
+
+        <Address>
+            <Street>123 Main St</Street>
+            <City>Baltimore</City>
+            <State>MD</State>
+            <PostalCode>21201</PostalCode>
+            <Country>USA</Country>
+        </Address>
+
+        <Courses>
+            <Course>
+                <CourseCode>CS101</CourseCode>
+                <CourseName>Introduction to Computer Science</CourseName>
+                <EnrollmentDate>2026-01-15</EnrollmentDate>
+            </Course>
+            <Course>
+                <CourseCode>MATH201</CourseCode>
+                <CourseName>Calculus I</CourseName>
+                <EnrollmentDate>2026-01-16</EnrollmentDate>
+            </Course>
+        </Courses>
+    </Student>
+
+    <Student>
+        <StudentId>1002</StudentId>
+        <FirstName>Jane</FirstName>
+        <LastName>Smith</LastName>
+        <Email>jane.smith@example.com</Email>
+        <DateOfBirth>2000-09-22</DateOfBirth>
+        <Gender>F</Gender>
+
+        <Address>
+            <Street>456 Oak Ave</Street>
+            <City>Towson</City>
+            <State>MD</State>
+            <PostalCode>21204</PostalCode>
+            <Country>USA</Country>
+        </Address>
+
+        <Courses>
+            <Course>
+                <CourseCode>ENG101</CourseCode>
+                <CourseName>English Composition</CourseName>
+                <EnrollmentDate>2026-01-20</EnrollmentDate>
+            </Course>
+        </Courses>
+    </Student>
+</Students>
